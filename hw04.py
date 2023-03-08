@@ -65,8 +65,8 @@ def planet(mass):
     """Construct a planet of some mass."""
     assert mass > 0
     "*** YOUR CODE HERE ***"
-    planet = ["planet",mass]
-    return planet
+    newPlanet = ["Planet", mass]
+    return newPlanet
 
 def mass(w):
     """Select the mass of a planet."""
@@ -128,17 +128,7 @@ def balanced(m):
     True
     """
     "*** YOUR CODE HERE ***"
-    if not is_mobile(m):
-        return True
-    
-    leftArm = left(m)
-    rightArm = right(m)
-    
-    if length(leftArm) * total_weight(end(leftArm)) != length(rightArm) * total_weight(end(rightArm)):
-        return False
-    
-    return balanced(end(leftArm)) and balanced(end(rightArm))
-    
+
 
 def totals_tree(m):
     """Return a tree representing the mobile with its total weight at the root.
